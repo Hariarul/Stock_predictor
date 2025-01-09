@@ -17,7 +17,8 @@ start = datetime(end.year-5,end.month,end.day)
 
 df = yf.download(stock,start, end,multi_level_index=False)
 
-model = load_model("Latest_stock_price_model.h5",custom_objects={'mse': MeanSquaredError()})
+model = load_model("Latest_stock_price_model.h5", compile=False)
+
 
 st.subheader("Stock data")
 
